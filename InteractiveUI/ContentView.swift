@@ -14,20 +14,20 @@ struct ContentView: View {
 
     var body: some View {
         VStack {
-        
+        textTitle = "Welcome /(name) !"
             Text("What is your name?")
                 .font(.title)
         }
-    TextField("Type your name here", text:
-                Value)
-            .multilineTextAlignment(.center)
-            .font(.title)
-            .border(Color.pink, width: 4)
-        Button("Submit name")
+        TextField("Type your name here", text:
+                    $name)
+        .multilineTextAlignment(.center)
+        .font(.title)
+        .border(Color.pink, width: 4)
+        Button("Submit name"){}
          print(name)
-            .font(.title2)
-            .buttonStyle(
-                .borderedProminent)
+        .font(.title2)
+            .buttonStyle
+                (.borderedProminent)
             .tint(.pink)
         .padding()
     }
